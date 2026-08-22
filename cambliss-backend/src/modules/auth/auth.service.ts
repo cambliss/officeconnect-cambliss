@@ -22,10 +22,15 @@ interface RegisterInput {
 	password: string;
 	firstName?: string;
 	lastName?: string;
+<<<<<<< HEAD
 	organizationName: string;
 	phone?: string;
 	otpRequestId?: string;
 	firebaseIdToken?: string;
+=======
+	organizationName?: string;
+	storeName?: string;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
 }
 
 interface LoginInput {
@@ -175,10 +180,15 @@ const ensureUserAccessProfileTable = async () => {
 export const register = async (input: RegisterInput) => {
 	const email = input.email?.trim().toLowerCase();
 	const password = input.password?.trim();
+<<<<<<< HEAD
 	const organizationName = input.organizationName?.trim();
 	const phone = input.phone?.trim() || null;
 	const otpRequestId = input.otpRequestId?.trim() || null;
 	const firebaseIdToken = input.firebaseIdToken?.trim() || null;
+=======
+	const storeName = input.storeName?.trim();
+	const organizationName = input.organizationName?.trim() || storeName;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
 
 	if (!email) {
 		throw new AuthError(400, "email is required");
@@ -189,7 +199,7 @@ export const register = async (input: RegisterInput) => {
 	}
 
 	if (!organizationName) {
-		throw new AuthError(400, "organizationName is required");
+		throw new AuthError(400, "organizationName or storeName is required");
 	}
 
 
@@ -233,6 +243,7 @@ export const register = async (input: RegisterInput) => {
 			},
 		});
 
+<<<<<<< HEAD
 		await tx.$executeRawUnsafe(
 			`
 			INSERT INTO "UserAccessProfile" ("userId", "organizationId", "phone", "accesses", "createdBy", "createdAt", "updatedAt")
@@ -243,10 +254,27 @@ export const register = async (input: RegisterInput) => {
 			phone,
 			user.id,
 		);
+=======
+		let createdStore = null;
+		if (storeName) {
+			const sanitizeDomain = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+			const baseDomain = sanitizeDomain(storeName) || "store";
+			const domain = `${baseDomain}-${Math.random().toString(36).substring(2, 7)}`;
+			createdStore = await tx.store.create({
+				data: {
+					name: storeName,
+					domain,
+					organizationId: organization.id,
+					ownerUserId: user.id,
+				},
+			});
+		}
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
 
 		return {
 			user,
 			organization,
+			store: createdStore,
 			roleName: "ADMIN" as RoleName,
 		};
 	});
@@ -258,8 +286,21 @@ export const register = async (input: RegisterInput) => {
 		role: result.roleName,
 	});
 
+	const safeUser = toSafeUser({
+		id: result.user.id,
+		email: result.user.email,
+		firstName: result.user.firstName,
+		lastName: result.user.lastName,
+		organizationId: result.organization.id,
+		role: result.roleName,
+	});
+
 	return {
+		id: result.user.id,
+		email: result.user.email,
+		storeName: result.store?.name ?? storeName,
 		token,
+<<<<<<< HEAD
 		user: toSafeUser({
 			id: result.user.id,
 			email: result.user.email,
@@ -269,6 +310,10 @@ export const register = async (input: RegisterInput) => {
 			role: result.roleName,
 			phone,
 		}),
+=======
+		user: safeUser,
+		organization: result.organization,
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
 	};
 };
 

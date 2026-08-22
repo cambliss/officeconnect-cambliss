@@ -2,8 +2,11 @@ import express from "express";
 import type { Request, Response, NextFunction } from "express";
 import path from "path";
 import cors from "cors";
+<<<<<<< HEAD
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
+=======
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
 import adminRoutes from "./modules/admin/admin.routes";
 import accountingRoutes from "./modules/accounting/accounting.routes";
 import crmRoutes from "./modules/crm/crm.routes";
@@ -29,6 +32,7 @@ const allowedOrigins = (process.env.CORS_ORIGINS ?? "")
 	.map((origin) => origin.trim())
 	.filter(Boolean);
 
+<<<<<<< HEAD
 // Safe defaults for local development when CORS_ORIGINS is not configured.
 // Avoids reflecting arbitrary origins with credentials enabled (CWE-942).
 const effectiveOrigins = allowedOrigins.length > 0
@@ -46,6 +50,20 @@ app.use(
 			}
 			callback(new Error("CORS origin not allowed"));
 		},
+=======
+app.use(
+	cors({
+		origin:
+			allowedOrigins.length > 0
+				? (origin, callback) => {
+					if (!origin || allowedOrigins.includes(origin)) {
+						callback(null, true);
+						return;
+					}
+					callback(new Error("CORS origin not allowed"));
+				}
+				: true,
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
 		credentials: true,
 	})
 );

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <meta name="description" content="Office Connect database architecture documentation covering multi-tenant entities, flows, indexing, and compliance.">
     <meta name="color-scheme" content="light">
     <title>Office Connect - Database Architecture</title>
@@ -68,6 +69,14 @@
             --font-mono: Monaco, "Courier New", monospace;
         }
 
+=======
+    <title>Office Connect - Database Architecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+    <style>
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         * {
             margin: 0;
             padding: 0;
@@ -75,6 +84,7 @@
         }
         
         body {
+<<<<<<< HEAD
             font-family: var(--font-sans);
             line-height: 1.6;
             color: var(--color-text);
@@ -97,10 +107,19 @@
             left: 12px;
             top: 12px;
         }
+=======
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         
         .container {
             max-width: 1000px;
             margin: 0 auto;
+<<<<<<< HEAD
             background-color: var(--color-surface);
             padding: 40px;
             border-radius: var(--radius);
@@ -109,11 +128,22 @@
         
         h1 {
             color: var(--color-primary);
+=======
+            background-color: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1d419d;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             margin-bottom: 10px;
             font-size: 2.5em;
         }
         
         h2 {
+<<<<<<< HEAD
             color: var(--color-primary-soft);
             margin-top: 30px;
             margin-bottom: 15px;
@@ -123,22 +153,45 @@
         
         h3 {
             color: var(--color-primary-soft);
+=======
+            color: #2c4b83;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d7e0f7;
+        }
+        
+        h3 {
+            color: #2c4b83;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             margin-top: 20px;
             margin-bottom: 10px;
         }
         
         h4 {
+<<<<<<< HEAD
             color: var(--color-primary);
+=======
+            color: #1d419d;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             margin-top: 10px;
             margin-bottom: 5px;
         }
         
         .entity-card {
+<<<<<<< HEAD
             border-left: 4px solid var(--color-primary);
             background-color: var(--color-card-bg);
             padding: 15px;
             margin-bottom: 15px;
             border-radius: var(--radius);
+=======
+            border-left: 4px solid #1d419d;
+            background-color: #f9fafb;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         }
         
         .entity-card h4 {
@@ -151,6 +204,7 @@
         }
         
         .info-box {
+<<<<<<< HEAD
             background-color: var(--color-info-bg);
             border-left: 4px solid var(--color-muted);
             padding: 15px;
@@ -162,6 +216,15 @@
             margin-top: 10px;
         }
 
+=======
+            background-color: #edf2ff;
+            border-left: 4px solid #6f84ad;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         .field-list {
             list-style: none;
             margin-left: 0;
@@ -174,21 +237,31 @@
         }
         
         .field-label {
+<<<<<<< HEAD
             color: var(--color-muted);
+=======
+            color: #6f84ad;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             font-weight: 600;
         }
         
         .page-break {
             page-break-after: always;
+<<<<<<< HEAD
             break-after: page;
             margin: 40px 0;
             border-top: 2px solid var(--color-border);
+=======
+            margin: 40px 0;
+            border-top: 2px solid #d7e0f7;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         }
         
         .header {
             text-align: center;
             margin-bottom: 30px;
         }
+<<<<<<< HEAD
 
         .doc-subtitle {
             color: var(--color-muted);
@@ -198,11 +271,17 @@
         
         .metadata {
             color: var(--color-muted);
+=======
+        
+        .metadata {
+            color: #6f84ad;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             font-size: 0.9em;
             margin-top: 10px;
         }
         
         .toc {
+<<<<<<< HEAD
             background-color: var(--color-card-bg);
             padding: 15px;
             margin: 20px 0;
@@ -213,6 +292,13 @@
         .toc-title {
             margin-top: 0;
             border: none;
+=======
+            background-color: #f9fafb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            border-left: 4px solid #1d419d;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         }
         
         .toc ol {
@@ -224,12 +310,20 @@
         }
         
         .toc a {
+<<<<<<< HEAD
             color: var(--color-primary);
             text-decoration: none;
         }
         
         .toc a:hover,
         .toc a:focus-visible {
+=======
+            color: #1d419d;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             text-decoration: underline;
         }
         
@@ -237,6 +331,7 @@
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
+<<<<<<< HEAD
             border-top: 2px solid var(--color-border);
             color: var(--color-muted);
             font-size: 0.9em;
@@ -252,12 +347,28 @@
             border: 1px solid var(--color-border);
             padding: 10px;
             border-radius: var(--radius);
+=======
+            border-top: 2px solid #d7e0f7;
+            color: #6f84ad;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #f5f5f5;
+            border: 1px solid #d7e0f7;
+            padding: 10px;
+            border-radius: 4px;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             overflow-x: auto;
             font-size: 0.85em;
         }
         
         code {
+<<<<<<< HEAD
             font-family: var(--font-mono);
+=======
+            font-family: 'Monaco', 'Courier New', monospace;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             color: #d63384;
         }
         
@@ -271,6 +382,7 @@
         }
         
         em {
+<<<<<<< HEAD
             color: var(--color-muted);
         }
 
@@ -297,25 +409,44 @@
             .skip-link {
                 display: none;
             }
+=======
+            color: #6f84ad;
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         }
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="container">
         <!-- Header -->
         <header class="header">
             <h1>Office Connect</h1>
             <p class="doc-subtitle">Database Architecture Documentation</p>
+=======
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Office Connect</h1>
+            <h2 style="color: #6f84ad; font-size: 1.5em; margin-top: 0; border: none;">Database Architecture Documentation</h2>
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             <div class="metadata">
                 <p><strong>Document Version:</strong> 1.0</p>
                 <p><strong>Generated:</strong> 2026-06-17</p>
             </div>
+<<<<<<< HEAD
         </header>
         
         <!-- Table of Contents -->
         <nav class="toc" aria-labelledby="toc-heading">
             <h2 class="toc-title" id="toc-heading">Table of Contents</h2>
+=======
+        </div>
+        
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2 style="margin-top: 0; border: none;">Table of Contents</h2>
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
             <ol>
                 <li><a href="#executive-summary">Executive Summary</a></li>
                 <li><a href="#core-entities">Core Entities</a></li>
@@ -324,9 +455,13 @@
                 <li><a href="#data-flow">Data Flow</a></li>
                 <li><a href="#indexing">Indexing Strategy</a></li>
             </ol>
+<<<<<<< HEAD
         </nav>
 
         <main id="main-content" tabindex="-1">
+=======
+        </div>
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         
         <!-- Executive Summary -->
         <h2 id="executive-summary">Executive Summary</h2>
@@ -334,7 +469,11 @@
         
         <div class="info-box">
             <strong>Platform Capabilities:</strong>
+<<<<<<< HEAD
             <ul class="compact-list">
+=======
+            <ul style="margin-top: 10px;">
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
                 <li>Multi-organizational support with role-based access control</li>
                 <li>Subscription management with tiered plans and feature modules</li>
                 <li>Customer Relationship Management (CRM) with pipeline tracking</li>
@@ -759,6 +898,7 @@ graph TD
         <h3>CRM Pipeline Flow - Lead to Deal to Invoice</h3>
         <div class="mermaid">
 sequenceDiagram
+<<<<<<< HEAD
             participant LG as Lead Generation
             participant CRM as CRM Pipeline
             participant SF as Sales Fulfillment
@@ -782,6 +922,31 @@ sequenceDiagram
             SF->>SF: E-Way Bill (if interstate)
             SF->>SF: PaymentAllocation matched
             Note over SF: Status: ISSUED → PAID → RECONCILED
+=======
+    participant Lead Generation
+    participant CRM Pipeline
+    participant Sales Fulfillment
+    
+    Lead Generation->>CRM Pipeline: Lead Created (source, status)
+    CRM Pipeline->>CRM Pipeline: Log Activity (CALL, EMAIL, MEETING)
+    CRM Pipeline->>CRM Pipeline: Update Score (0-100)
+    Note over CRM Pipeline: Lead Status: NEW → QUALIFIED → NEGOTIATING
+    
+    CRM Pipeline->>CRM Pipeline: Deal Created (pipeline, stage)
+    CRM Pipeline->>CRM Pipeline: DealStageHistory recorded
+    Note over CRM Pipeline: Stage Movement: NEW → QUALIFIED → PROPOSAL → WON/LOST
+    
+    CRM Pipeline->>Sales Fulfillment: Deal Won
+    Sales Fulfillment->>Sales Fulfillment: Order Created (customer, items)
+    Sales Fulfillment->>Sales Fulfillment: Order Status: PENDING → PAID
+    
+    Sales Fulfillment->>Sales Fulfillment: Invoice Generated
+    Note over Sales Fulfillment: InvoiceItems with GST Calculation
+    
+    Sales Fulfillment->>Sales Fulfillment: E-Way Bill (if interstate)
+    Sales Fulfillment->>Sales Fulfillment: PaymentAllocation matched
+    Note over Sales Fulfillment: Status: ISSUED → PAID → RECONCILED
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         </div>
         
         <!-- HRM Module Flow -->
@@ -830,6 +995,7 @@ flowchart TD
         <h3>Accounting Double-Entry Flow</h3>
         <div class="mermaid">
 sequenceDiagram
+<<<<<<< HEAD
             participant TX as Transaction
             participant JE as JournalEntry
             participant LA as LedgerAccount
@@ -853,6 +1019,31 @@ sequenceDiagram
             TX->>TX: Status: POSTED → PAID
     
             Note over LA: Period Closure<br/>Locked for Audit<br/>7-Year Retention
+=======
+    participant Transaction
+    participant JournalEntry
+    participant LedgerAccount
+    
+    Note over Transaction: SALE Transaction Initiated<br/>Amount: 10,000
+    Transaction->>JournalEntry: Create JournalEntry #1
+    
+    JournalEntry->>JournalEntry: Debit: AR Account (10,000)
+    JournalEntry->>JournalEntry: Credit: Revenue Account (10,000)
+    
+    Note over JournalEntry: Invariant Check<br/>Debits = Credits
+    
+    JournalEntry->>LedgerAccount: Update AR Account
+    JournalEntry->>LedgerAccount: Update Revenue Account
+    
+    Note over LedgerAccount: Ledger Balance Updated<br/>Account Hierarchy Maintained
+    
+    Transaction->>Transaction: Status: DRAFT → POSTED
+    
+    Note over Transaction: PaymentAllocation<br/>Transaction Matched to Invoice
+    Transaction->>Transaction: Status: POSTED → PAID
+    
+    Note over LedgerAccount: Period Closure<br/>Locked for Audit<br/>7-Year Retention
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
         </div>
         
         <!-- E-Commerce Order Flow -->
@@ -955,10 +1146,17 @@ graph TB
     ISOLATED -->|Performance| BENEFIT["Query Optimization<br/>Partition Ready<br/>Scalable<br/>Secure"]
         </div>
         
+<<<<<<< HEAD
         <h3>Multi-tenant Data Isolation Key Principles</h3>
         <div class="info-box">
             <strong>Key Principles:</strong>
             <ul class="compact-list">
+=======
+        <h3>Multi-tenant Data Isolation Architecture</h3>
+        <div class="info-box">
+            <strong>Key Principles:</strong>
+            <ul style="margin-top: 10px;">
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
                 <li>Every table contains <code>organizationId</code> field</li>
                 <li>All indexes include <code>organizationId</code> for query efficiency</li>
                 <li>Foreign key constraints prevent cross-organization access</li>
@@ -1063,7 +1261,11 @@ EmployeeShift(employeeId, shiftId)
         <h3>Data Integrity Constraints</h3>
         <div class="info-box">
             <strong>Enforced Rules:</strong>
+<<<<<<< HEAD
             <ul class="compact-list">
+=======
+            <ul style="margin-top: 10px;">
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
                 <li>Subscription status transitions: valid state machine enforced</li>
                 <li>GST Calculations: CGST + SGST ≥ IGST (for non-interstate)</li>
                 <li>Attendance Uniqueness: one record per (employeeId, date)</li>
@@ -1084,6 +1286,7 @@ EmployeeShift(employeeId, shiftId)
         </ul>
         
         <!-- Footer -->
+<<<<<<< HEAD
         </main>
 
         <footer class="footer">
@@ -1091,6 +1294,13 @@ EmployeeShift(employeeId, shiftId)
             <p>Generated on 2026-06-17 | PostgreSQL + Prisma ORM | Version 1.0</p>
             <p class="footer-note">For questions or updates, please contact the development team.</p>
         </footer>
+=======
+        <div class="footer">
+            <p><strong>Office Connect Database Architecture</strong></p>
+            <p>Generated on 2026-06-17 | PostgreSQL + Prisma ORM | Version 1.0</p>
+            <p style="margin-top: 15px; font-size: 0.85em;">For questions or updates, please contact the development team.</p>
+        </div>
+>>>>>>> aa34278 (feat: Add Akaunting, Mercur multi-vendor engine, and WebRTC Video Connect dual party calling)
     </div>
 </body>
 </html>
